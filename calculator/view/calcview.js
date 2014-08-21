@@ -15,7 +15,6 @@ module.exports = Backbone.View.extend({
     var template = require('../template/calctemplate.hbs');
     var data = this.model.attributes;
     this.$el.html(template(data));
-    $('#calc').append(this.$el);
     return this;
   },
 
