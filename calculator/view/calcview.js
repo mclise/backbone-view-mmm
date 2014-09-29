@@ -4,8 +4,8 @@ Backbone.$ = $;
 
 module.exports = Backbone.View.extend({
   events: {
-    'click #sub' : 'calculate',
-  },
+    'click #sub' : 'calculate'
+  }, 
 
   initialize: function() {
     this.render();
@@ -19,7 +19,7 @@ module.exports = Backbone.View.extend({
   },
 
   calculate: function() {
-    var numbers = this.$el.find('#numbers').val();
+    var numbers = this.$el.find('numbers').val();
     this.model.set('nums', numbers);
     this.model.findAnswer(numbers);
     this.render();
